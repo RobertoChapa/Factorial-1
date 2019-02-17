@@ -1,0 +1,46 @@
+
+
+//From Bobby
+
+long long findFactorial(long long f);
+
+int main()
+{
+	bool t = true;
+	long long f;
+
+	while (t == true)
+	{
+		cout << "Input f: " << endl;
+		cin >> f; //If user enters anything other than an integer f return 0
+
+		if (f == 0)
+		{
+			t = false;
+
+			cout << endl << "END" << endl << endl;
+		}
+		else
+		{
+			f = findFactorial(f);
+
+			cout << endl;
+			cout << "The factorial is " << f << endl << endl;
+		}
+	}
+
+	return 0;
+}
+
+long long findFactorial(long long f)
+{
+	long long p = 1;
+
+	for (long long i = 1; i <= f; i++)
+	{
+		p *= i;
+	}
+
+	return p;
+}
+
